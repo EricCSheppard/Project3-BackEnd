@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const commentSchema = require('./comment')
 
 const goalSchema = new mongoose.Schema(
 	{
@@ -26,6 +27,7 @@ const goalSchema = new mongoose.Schema(
             type: Boolean,
             required: true
         },
+        comments: [commentSchema],
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: 'User',

@@ -59,7 +59,7 @@ router.get('/goals/:goalId', (req, res, next) => {
 // POST /goals
 router.post('/goals', requireToken, (req, res, next) => {
 	// set owner of new goal to be current user
-	req.body.goal.owner = req.user.goalId
+	req.body.goal.owner = req.user.id
 
 	Goal.create(req.body.goal)
 		// respond to succesful `create` with status 201 and JSON of new "goal"

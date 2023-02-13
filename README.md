@@ -1,12 +1,14 @@
-# Project W3
+# Project W3 - Back End
 
 ## Overview
 
-Project **W**3 (temporary name) is a full-stack application that allows you to create your own goals list and share it with the world! (or keep it private if you prefer)
+This is the Back End of [Project ***W***3 Client](https://github.com/AlexMcBex/Project3-Client)
+
+Project ***W***3 (temporary name) is a full-stack application that allows you to create your own goals list and share it with the world! (or keep it private if you prefer)
 Each goal has 3 main components:
-- **W**hat: what you want to achieve
-- **W**hen: a deadline for your goal or, if you're not a fan of timers, when your goal starts
-- **W**hy: that's what makes your goal special and unique, the **W**hy, your specific reason and motivation to achieve your goal!
+- ***W***hat: what you want to achieve
+- ***W***hen: a deadline for your goal or, if you're not a fan of timers, when your goal starts
+- ***W***hy: that's what makes your goal special and unique, the ***W***hy, your specific reason and motivation to achieve your goal!
 
 You can browse other users' goals and motivate them by leaving a like or a comment and, if you really like their goal, you can copy it on your own list.
 
@@ -77,26 +79,4 @@ You can browse other users' goals and motivate them by leaving a like or a comme
 
 ![entityRelationshipDiagram](/img/ERD.png)
 
----
 
-## Wireframe
- 
- ### User Profile page
- 
-![profilePage](/img/wf-profile.jpg)
-
-### Goals Index 
-
-![goalIndex](/img/wf-goalindex.jpg)
-
-### Goal Show
-
-![goalshow](/img/wf-goalshow.jpg)
-
-### Goal Create
-
-![goalcreate](/img/wf-goalcreate.jpg)
-
-### Chat page
-
-![chatpage](/img/wireframe-chat.jpg)

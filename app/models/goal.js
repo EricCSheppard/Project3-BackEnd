@@ -2,13 +2,13 @@ const mongoose = require('mongoose')
 
 const goalSchema = new mongoose.Schema(
 	{
-		What: {
+		what: {
 			type: String,
 			required: true
 		},
 		type: {
 			type: String,
-            enum: ['Finance', 'Lifestyle', 'Health/Fitness'],
+            enum: ['Finance', 'Lifestyle', 'Health-Fitness'],
 			required: true
 		},
         whenEnd:{

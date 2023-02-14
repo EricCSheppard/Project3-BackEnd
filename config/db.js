@@ -2,7 +2,7 @@
 
 // creating a base name for the mongodb
 // REPLACE THE STRING WITH YOUR OWN DATABASE NAME
-const mongooseBaseName = 'project3'
+const mongooseBaseName = 'project3W'
 
 // create the mongodb uri for development and test
 const database = {

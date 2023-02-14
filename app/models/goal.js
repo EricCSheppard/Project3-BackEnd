@@ -23,6 +23,9 @@ const goalSchema = new mongoose.Schema(
             type: Boolean,
             required: true
         },
+        completedDate: {
+            type: Date
+        },
         isPublic: {
             type: Boolean,
             required: true
@@ -41,12 +44,22 @@ const goalSchema = new mongoose.Schema(
 	}
 )
 
-// goalSchema.virtual('countdown').get(function () {
-//     if (whenEnd) {
-//         return Date.now
-//     } else {
-//         return null
-//     }
-// })
+goalSchema.virtual('daysLeft').get(function () {
+    if (this.whenEnd) {
+        return Math.round((this.whenEnd - Date.now())/8.64e+7)
+    } else {
+        return null
+    }
+})
+
+goalSchema.virtual('finishedDays').get(function () {
+    if (this.completedDate && this.isComplete == true) {
+        return Math.round((this.completedDate - this.createdAt)/8.64e+7)
+    } else {
+        return null
+    }
+})
+
+
 
 module.exports = mongoose.model('Goal', goalSchema)

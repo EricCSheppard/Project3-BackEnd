@@ -44,7 +44,7 @@ router.delete('/comment/:goalId/:commentId', requireToken, (req, res, next) => {
     .then(handle404)
     .then(goal => {
         const theComment = goal.comments.id(commentId)
-        requireOwnership(req, goal)
+        requireOwnership(req, theComment)
         theComment.remove()
         return goal.save()
     })

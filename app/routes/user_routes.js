@@ -26,6 +26,10 @@ const requireToken = passport.authenticate('bearer', { session: false })
 // instantiate a router (mini app that only handles routes)
 const router = express.Router()
 
+const customErrors = require('../../lib/custom_errors')
+// we'll use this function to send 404 when non-existant document is requested
+const handle404 = customErrors.handle404
+
 
 // INDEX
 // GET /users
@@ -45,7 +49,7 @@ router.get('/users',  (req, res, next) => {
 
 // SHOW
 // GET /users/5a7db6c74d55bc51bdf39793
-router.get('/users/:userId', requireToken, (req, res, next) => {
+router.get('/users/:userId',  (req, res, next) => {
 	// req.params.id will be set based on the `:id` in the route
 	User.findById(req.params.userId)
 		.then(handle404)

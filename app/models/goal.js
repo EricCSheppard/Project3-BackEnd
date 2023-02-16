@@ -52,6 +52,24 @@ goalSchema.virtual('daysLeft').get(function () {
     }
 })
 
+
+goalSchema.virtual('daysTotal').get(function () {
+    if (this.whenEnd) {
+        return Math.round((this.whenEnd - this.createdAt)/8.64e+7)
+    } else {
+        return null
+    }
+})
+
+goalSchema.virtual('percentRemain').get(function () {
+    if (this.whenEnd) {
+        return Math.round((this.daysLeft/this.daysTotal) * 100)
+    } else {
+        return null
+    }
+
+})
+
 goalSchema.virtual('finishedDays').get(function () {
     if (this.completedDate && this.isComplete == true) {
         return Math.round((this.completedDate - this.createdAt)/8.64e+7)

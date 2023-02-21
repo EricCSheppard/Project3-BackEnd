@@ -57,23 +57,25 @@ You can browse other users' goals and motivate them by leaving a like or a comme
 | /users/login  |    GET      | login     |
 | /users/login  |    POST      | create     |
 | /users/logout  |    POST     | destroy     |
+| /users/  |    GET     | index     |
+| /users/:userId  |    GET     | show     |
 
 ### Goals
 
 | URL       |   HTTP Verb|  Action |
 | ----------- | ----------- | ----|
-| /goals/new  |    POST     | create     |
-| /goals/:id  |    GET      | show     |
-| /goals/user  |    GET      | index     |
-| /goals/edit/:id |    PUT      | update     |
-| /goals/:id |    DELETE      | destroy     |
+| /goals/  |    POST     | create     |
+| /goals/:goalId  |    GET      | show     |
+| /goals/  |    GET      | index     |
+| /goals/:goalId |    PUT      | update     |
+| /goals/:goalId |    DELETE      | destroy     |
 
 ### Comments
 
 | URL       |   HTTP Verb|  Action |
 | ----------- | ----------- | ----|
-| /comments/:userId     | POST       | create      |
-| /comments/delete/:userId/:commentId  |    DELETE     | destroy     |
+| /comment/:goalId     | POST       | create      |
+| /comment/:goalId/:commentId  |    DELETE     | destroy     |
 
 ## Entity Relationship Diagram
 
